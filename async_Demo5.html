@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function who() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("Anil Kumar Prajapati..")
+                }, 1000)
+            })
+        }
+
+        function what() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("Spring Boot & MicroService")
+                }, 1000)
+            })
+        }
+
+        function where() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("in class")
+                }, 1000)
+            })
+        }
+
+        function cont() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("9 to 10 PM")
+                }, 1000)
+            })
+        }
+
+        function commenting() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("Mr Vijay Kumar Sir")
+                }, 1000)
+            })
+        }
+
+        function langer() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve("Completed the Spring Boot & MicroServices Cource")
+                }, 1000)
+            })
+        }
+
+        async function getData() {
+            const [res1, res2, res3, res4, res5, res6] = await Promise.all([who(), what(), where(), cont(), commenting(), langer()])
+            console.log(`${res1} ${res2} ${res3} ${res4} ${res5}  ${res6}`)
+        }
+        getData()
+
+        /*Promise.all returns an array with the resolved 
+			values once all the passed-in promises have resolved.*/
+    </script>
+</body>
+
+</html>

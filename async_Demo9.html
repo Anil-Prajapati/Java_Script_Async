@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getData() {
+            let promiseObj = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190])
+                }, 1000)
+            })
+            promiseObj.then((result) => {
+
+                console.log(result)
+
+            }).catch((err) => {
+
+                document.write(err)
+
+            });
+        }
+
+        getData()
+
+        //this is the async
+        async function getFinal() {
+            let promiseObje = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve([10, 20, 30, 40, 50, 60, 70, 80, 90])
+                }, 2000)
+            })
+            let result = await promiseObje;
+            console.log("this is the async method in arrays=" + result)
+        }
+        getFinal()
+    </script>
+</body>
+
+</html>

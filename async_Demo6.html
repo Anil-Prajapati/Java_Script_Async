@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //there are the github repository id print the json 
+        let url1 = "https://api.github.com/users/sanjaysamantra1";
+        let url2 = "https://api.github.com/users/hrushi1227";
+        let url3 = "https://api.github.com/users/Anil-Prajapati";
+        async function getdata() {
+            const [res1, res2, res3] = await Promise.all([fetch(url1), fetch(url2), fetch(url3)])
+            const [data1, data2, data3] = await Promise.all([res1.json(), res2.json(), res3.json()])
+
+            console.log(data1, data2, data3);
+        }
+        getdata()
+    </script>
+</body>
+
+</html>

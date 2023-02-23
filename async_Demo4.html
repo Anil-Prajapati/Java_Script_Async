@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let url1 = "https://fakestoreapi.com/products";
+        let url2 = "https://dummyjson.com/products";
+
+
+        async function getdata() {
+            try {
+                let getUrl1 = await fetch(url1)
+                console.log(getUrl1)
+                let response = await getUrl1.json();
+                console.log(response)
+
+                let getUlr2 = await fetch(url2)
+                console.log(getUrl2)
+                let response1 = await getUrl2.json();
+                console.log(response1)
+
+            } catch {
+                console.log('SOMETHING WANT ROMG...')
+            }
+        }
+        getdata();
+    </script>
+</body>
+
+</html>

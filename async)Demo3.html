@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function who() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Anil Kumar Prajapati")
+                }, 1000)
+            })
+        }
+
+        function what() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Spring boot & MicroService")
+                }, 2000)
+            })
+        }
+
+        function where() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("In Class")
+                }, 1000)
+            })
+        }
+
+        async function getdata() {
+            let promoseOne = await who();
+            console.log(promoseOne);
+
+            let promoseTwo = await what();
+            console.log(promoseTwo);
+
+            let promoseTree = await where();
+            console.log(promoseTree);
+
+            console.log(promoseOne, promoseTwo, promoseTree)
+        }
+        getdata()
+    </script>
+</body>
+
+</html>
